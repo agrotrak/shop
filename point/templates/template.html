@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    {% include "link_css_js.html" %}</head>
+<body>
+{% include "header.html" %}
+
+<div class="content">
+{% block content %}
+    <h1>Извините, ваша страница не найдена</h1>
+    <div><p></p> Перейдите пожалуйста по <a href="">ссылке</a>, чтобы сообщить администратору об ошибке</div>
+{% endblock %}
+
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>

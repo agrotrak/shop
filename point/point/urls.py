@@ -5,11 +5,12 @@ from django.conf.urls import patterns, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-from inetshop.views.default import main
+from inetshop.views.default import main,nofound
 
 urlpatterns = patterns('',
     # Examples:
-     url(r'^$', main ),
+     url(r'^$', nofound ),
+     url(r'^main$', main ),
     # url(r'^point/', include('point.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

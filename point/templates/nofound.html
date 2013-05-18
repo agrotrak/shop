@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Error</title>
-    {% include "link_css_js.html" %}</head>
-<body>
-    {% include "header.html" %}
-
+   {% extends "template.html" %}
+    {% block content %}
     <h1>Извините, ваша страница не найдена</h1>
     <div><p></p> Перейдите пожалуйста по <a href="">ссылке</a>, чтобы сообщить администратору об ошибке</div>
-
-    {% include "footer.html" %}
-</body>
-</html>
+    {% endblock %}
