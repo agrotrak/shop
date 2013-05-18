@@ -1,12 +1,15 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
+
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
+from inetshop.views.default import main
+
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'point.views.home', name='home'),
+     url(r'^$', main ),
     # url(r'^point/', include('point.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
