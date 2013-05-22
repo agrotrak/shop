@@ -4,16 +4,19 @@
     <title>{{ title }}</title>
     {% include "link_css_js.html" %}</head>
 <body>
-{% include "header.html" %}
 
-<div class="content">
-    <div class="leftside">Меню выбора</div>
-{% block content %}
-    <div class="wrapper"> Перейдите пожалуйста по <a href="">ссылке</a>, чтобы сообщить администратору об ошибке</div>
-{% endblock %}
+<div id="content">
+    {% include "header.html" %}
+    <hr>
+    <div id="menublock">Menu</div>
+    <div id="leftside">Left side</div>
+        <div id="rightside">Right side</div>
+    <div id="side">Side</div>
 
+    <div id="contacts">Contacts</div>
+    <hr>
+    {% include "footer.html" %}
 </div>
 
-{% include "footer.html" %}
 </body>
 </html>
