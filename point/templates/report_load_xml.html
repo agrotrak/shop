@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Load XML</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/report.css">
+    <script src="/static/js/jquery.js"></script>
+    <script>
+        function category_light(){
+            $("#"+this.text).toggleClass("light")
+            return false;
+        }
+        $(function(){
+            $(".to_category").on('mouseout',category_light)
+            $(".to_category").on('mouseenter',category_light)
+
+        })
+    </script>
+</head>
+<body>
+    <h2>Report Load XML to database</h2>
+    <hr>
+    <h3>Categories [{{ categories|length }}]</h3>
+    <hr>
+    <table>
+    <tr><th>ID</th><th>Name</th><th>Parent</th></tr>
+    {% for c in categories %}
+        <tr id="{{ c.id }}"><td>{{ c.id }}</td><td> {{ c.name  }}</td><td>
+            <a href="#{{ c.parent }}">{{ c.parent }}</a>
+        </td></tr>
+    {% empty %}
+        No categories
+    {% endfor %}
+    </table>
+
+    <hr>
+    <h3>Products [{{ products|length }}]</h3>
+    <hr>
+    <table>
+        <tr><th>ID</th><th>Name</th><th>Category</th><th>Cost</th><th>Count</th></tr>
+        {% for p in products %}
+            <tr><td>{{ p.id }}</td><td> {{ p.name  }}</td><td><a class="to_category" href="#{{ p.category }}">{{ p.category }}</a></td><td>{{ p.cost }}</td><td>{{ p.count }}</td></tr>
+        {% empty %}
+            No categories
+        {% endfor %}
+</body>
+</html>
