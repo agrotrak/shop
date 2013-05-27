@@ -13,3 +13,4 @@ def nofound(request):
 def report_load_xml(request):
     (categories,products)=loadxml(r"http://localhost:8000/static/xml/xml1.html")
     return render_to_response('report_load_xml.html',{'categories':categories,'products':products})
+

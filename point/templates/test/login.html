@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    {% if msg %}
+        <h1>{{ msg }}</h1>
+    {% endif %}
+
+    <form action="/accounts/login/" method="get">
+    {% csrf_token %}
+        <hr>
+        Username: <p>
+
+        <input type="text" value="" name="username"></p>
+
+        Password: <p>
+
+        <input type="text" value="" name="password"></p>
+        <input type="submit" value="Send">
+
+    </form>
+</body>
+</html>
