@@ -6,14 +6,15 @@ from django.conf.urls import patterns, url
 # admin.autodiscover()
 
 from inetshop.views.default import main,nofound,report_load_xml
-from inetshop.views.test import test1,test2,login,logout
+from inetshop.views.test import test1,test2,login,logout,form1
 
 urlpatterns = patterns('',
     # Examples:
     url(r'^accounts/logout$',logout),
      url(r'^accounts/login/$',login),
      url(r'^test1$',test1),
-    url(r'^test2$',test2),
+     url(r'^test2$',test2),
+     url(r'^form1$',form1),
      url(r'^$', nofound ),
      url(r'^main$', main ),
      url(r'^report_load_xml$',report_load_xml),

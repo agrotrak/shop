@@ -29,6 +29,11 @@ def login(request):
         return render_to_response('test/login.html')
     return render_to_response('test/login.html',{'msg':'error in auth'})
 
+def form1(request):
+    from inetshop.forms import FormProduct
+    f=FormProduct()
+    return render_to_response('test/formproduct.html',{'form':f})
+
 def logout(request):
     django_logout(request)
     return test2(request)
